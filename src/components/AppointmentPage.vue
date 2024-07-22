@@ -70,9 +70,7 @@
     },
     methods: {
       handleSubmit() {
-        // Handle form submission, e.g., send data to an API or email
         alert('Appointment request submitted! We will get back to you shortly.');
-        // Clear the form
         this.form = {
           name: '',
           email: '',
