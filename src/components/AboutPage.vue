@@ -2,7 +2,7 @@
   <div class="bg-gray-100 min-h-screen flex flex-col items-center py-20">
     <header class="container mx-auto text-center mb-12">
       <h1 class="text-4xl font-bold text-gray-800">About Us</h1>
-      <p class="text-gray-600 mt-4">Learn more about LD Nail Lounge and our commitment to providing exceptional nail care.</p>
+      <p class="text-gray-600 mt-4">Learn more about Paradise Nail Spa and our commitment to providing exceptional nail care.</p>
     </header>
 
     <main class="container mx-auto px-4">
@@ -17,19 +17,19 @@
         <h2 class="text-3xl font-bold text-gray-800 mb-6">Meet the Team</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <img src="https://via.placeholder.com/150" alt="Team Member 1" class="w-32 h-32 object-cover rounded-full mx-auto mb-4"/>
+            <!-- <img src="https://via.placeholder.com/150" alt="Team Member 1" class="w-32 h-32 object-cover rounded-full mx-auto mb-4"/> -->
             <h3 class="text-xl font-semibold text-gray-800">Loc Nguyen</h3>
-            <p class="text-gray-600">Founder & Lead Nail Technician</p>
+            <p class="text-gray-600">Founder & Owner</p>
             <p class="text-gray-500 mt-2">With over a decade of experience, Loc is passionate about delivering the best nail care services and ensuring each client leaves with a smile.</p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <img src="https://via.placeholder.com/150" alt="Team Member 2" class="w-32 h-32 object-cover rounded-full mx-auto mb-4"/>
+            <!-- <img src="https://via.placeholder.com/150" alt="Team Member 2" class="w-32 h-32 object-cover rounded-full mx-auto mb-4"/> -->
             <h3 class="text-xl font-semibold text-gray-800">Duyen Nguyen</h3>
-            <p class="text-gray-600">Co-Founder & Lead Nail Technician</p>
+            <p class="text-gray-600">Lead Nail Technician</p>
             <p class="text-gray-500 mt-2">Duyen brings creativity and precision to her work, specializing in intricate nail art and ensuring top-notch customer service.</p>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <img src="https://via.placeholder.com/150" alt="Team Member 3" class="w-32 h-32 object-cover rounded-full mx-auto mb-4"/>
+            <!-- <img src="https://via.placeholder.com/150" alt="Team Member 3" class="w-32 h-32 object-cover rounded-full mx-auto mb-4"/> -->
             <h3 class="text-xl font-semibold text-gray-800">Lan Nguyen</h3>
             <p class="text-gray-600">Nail Technician</p>
             <p class="text-gray-500 mt-2">Lan is dedicated to making every visit a pleasant experience with her friendly demeanor and attention to detail.</p>

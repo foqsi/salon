@@ -1,7 +1,7 @@
 <template>
   <header class="bg-white shadow w-full fixed top-0 left-0 right-0 z-10">
     <nav class="container mx-auto p-4 flex justify-between items-center">
-      <h1 class="text-3xl font-bold text-pink-600"><a href="/">LD Nail Salon</a></h1>
+      <h1 class="text-3xl font-bold text-pink-600"><a href="/">Paradise Nail Spa</a></h1>
       <div class="block lg:hidden">
         <button @click="toggleMenu" class="text-gray-700 focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

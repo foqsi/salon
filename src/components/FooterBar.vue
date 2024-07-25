@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-gray-800 text-white w-full py-4 text-center">
-    <p>&copy; LD Nail Salon. All rights reserved.</p>
+    <p>&copy; Paradise Nail Spa. All rights reserved.</p>
   </footer>
 </template>
 
