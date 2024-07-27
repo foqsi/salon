@@ -2,14 +2,14 @@
   <div class="bg-gray-100 min-h-screen flex flex-col items-center py-20">
     <header class="container mx-auto text-center mb-12">
       <h1 class="text-4xl font-bold text-gray-800">About Us</h1>
-      <p class="text-gray-600 mt-4">Learn more about Paradise Nail Spa and our commitment to providing exceptional nail care.</p>
+      <p class="text-gray-600 mt-4">Learn more about El Reno Nail Spa and our commitment to providing exceptional nail care.</p>
     </header>
 
     <main class="container mx-auto px-4">
       <section class="mb-12">
         <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Mission</h2>
         <p class="text-gray-600">
-          At LD Nail Lounge, our mission is to deliver a relaxing and enjoyable experience while ensuring your nails look stunning. We are committed to using high-quality products and providing exceptional service in a clean and welcoming environment.
+          At El Reno Nail Lounge, our mission is to deliver a relaxing and enjoyable experience while ensuring your nails look stunning. We are committed to using high-quality products and providing exceptional service in a clean and welcoming environment.
         </p>
       </section>
 
@@ -40,7 +40,7 @@
       <section class="mb-12">
         <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
         <p class="text-gray-600">
-          LD Nail Lounge was founded with a vision to provide exceptional nail care services in a luxurious and relaxing environment. Our team of skilled professionals is committed to making every visit enjoyable and ensuring that you leave feeling pampered and refreshed.
+          El Reno Nail Spa Lounge was founded with a vision to provide exceptional nail care services in a luxurious and relaxing environment. Our team of skilled professionals is committed to making every visit enjoyable and ensuring that you leave feeling pampered and refreshed.
         </p>
       </section>
 

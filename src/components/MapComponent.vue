@@ -16,7 +16,7 @@
         @closeclick="infoWindowOpened = false"
       >
         <div>
-          <h3>Paradise Nail Spa</h3>
+          <h3>El Reno Nail Spa</h3>
           <p>1601 Investors Ave, El Reno, OK, 73036</p>
         </div>
       </GMapInfoWindow>
