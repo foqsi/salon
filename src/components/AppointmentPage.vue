@@ -47,7 +47,7 @@
             <input type="time" id="time" v-model="form.time" required class="w-full p-2 border border-gray-300 rounded"/>
           </div>
   
-          <button type="submit" class="bg-pink-600 text-white px-6 py-2 rounded-full text-lg hover:bg-pink-700">Submit Appointment Request</button>
+          <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-full text-lg hover:bg-red-900">Submit Appointment Request</button>
         </form>
       </main>
     </div>

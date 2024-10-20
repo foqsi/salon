@@ -4,6 +4,7 @@ import ServicesPage from '../components/ServicesPage.vue';
 import AboutPage from '../components/AboutPage.vue';
 import ContactPage from '../components/ContactPage.vue';
 import AppointmentPage from '../components/AppointmentPage.vue';
+import GalleryPage from '../components/GalleryPage.vue';
 
 const routes = [
     {
@@ -31,6 +32,11 @@ const routes = [
         name: 'AppointmentPage',
         component: AppointmentPage,
     },
+    {
+        path: '/gallery',
+        name: 'GalleryPage',
+        component: GalleryPage,
+    }
 ];
 
 const router = createRouter({

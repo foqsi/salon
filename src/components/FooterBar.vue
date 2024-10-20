@@ -1,6 +1,6 @@
 <template>
-  <footer class="bg-gray-800 text-white w-full py-4 text-center">
-    <p>&copy; El Reno Nail Spa. All rights reserved.</p>
+  <footer class="bg-red-900 text-white w-full py-4 text-center">
+    <p>&copy; El Reno Nail Spa @ 2024. All rights reserved.</p>
   </footer>
 </template>
 
