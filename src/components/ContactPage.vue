@@ -32,7 +32,7 @@
               <textarea id="message" v-model="form.message" rows="4" required class="w-full p-2 border border-gray-300 rounded"></textarea>
             </div>
 
-            <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-full text-lg hover:bg-red-900">Send Message</button>
+            <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-full text-lg hover:bg-red-500">Send Message</button>
           </form>
         </div>
 

@@ -1,6 +1,6 @@
 <template> <header class="bg-white shadow w-full fixed top-0 left-0 right-0 z-10">
     <nav class="container mx-auto p-4 flex justify-between items-center">
-      <h1 class="text-3xl font-bold text-red-700"><a href="/">El Reno Nail Spa</a></h1>
+      <h1 class="text-3xl font-bold text-red-600"><a href="/">El Reno Nail Spa</a></h1>
       <div class="block lg:hidden">
         <button @click="toggleMenu" class="text-gray-700 focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -27,12 +27,12 @@
             </svg>
           </button>
           <ul class="flex flex-col items-start p-8 space-y-4">
-            <li><a href="/" @click="toggleMenu" class="text-gray-700 text-lg hover:text-pink-600">Home</a></li>
-            <li><a href="/gallery" @click="toggleMenu" class="text-gray-700 hover:text-pink-600">Gallery</a></li>
-            <li><a href="/appointment" @click="toggleMenu" class="text-gray-700 text-lg hover:text-pink-600">Appointments</a></li>
-            <li><a href="/services" @click="toggleMenu" class="text-gray-700 text-lg hover:text-pink-600">Services</a></li>
-            <!-- <li><a href="/about" @click="toggleMenu" class="text-gray-700 text-lg hover:text-pink-600">About</a></li> -->
-            <li><a href="/contact" @click="toggleMenu" class="text-gray-700 text-lg hover:text-pink-600">Contact</a></li>
+            <li><a href="/" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Home</a></li>
+            <li><a href="/gallery" @click="toggleMenu" class="text-gray-700 hover:text-red-600">Gallery</a></li>
+            <li><a href="/appointment" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Appointments</a></li>
+            <li><a href="/services" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Services</a></li>
+            <!-- <li><a href="/about" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">About</a></li> -->
+            <li><a href="/contact" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Contact</a></li>
           </ul>
         </div>
       </div>
