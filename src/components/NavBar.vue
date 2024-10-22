@@ -2,7 +2,7 @@
     <nav class="container mx-auto p-4 flex justify-between items-center">
       <h1 class="text-3xl font-bold text-red-600 flex items-center space-x-2">
         <a href="/" class="flex items-center">
-          <img src="../assets/images/logo.png" alt="Logo" class="w-12 h-12">
+          <img src="../assets/images/logo2.png" alt="Logo" class="w-full h-20">
         </a>
         <a href="/" class="inline-block">El Reno Nail Spa</a>
       </h1>
@@ -22,7 +22,7 @@
         <li><a href="/contact" class="text-gray-700 hover:text-red-600 hover:font-bold">Contact</a></li>
       </ul>
     </nav>
-    <!-- Side Menu -->
+    <!-- Side Menu --> 
     <transition name="slide">
       <div v-if="isMenuOpen" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-20">
         <div class="fixed top-0 right-0 w-64 bg-white h-full shadow-lg z-30">

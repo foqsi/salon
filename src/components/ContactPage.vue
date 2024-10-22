@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 min-h-screen flex flex-col items-center py-20">
+  <div class="bg-gray-100 min-h-screen flex flex-col items-center py-32">
     <header class="container mx-auto text-center mb-12">
       <h1 class="text-4xl font-bold text-gray-800">Contact Us</h1>
       <p class="text-gray-600 mt-4">We’d love to hear from you! Fill out the form below or visit us at our location.</p>

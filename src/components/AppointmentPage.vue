@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-100 min-h-screen flex flex-col items-center py-20">
+    <div class="bg-gray-100 min-h-screen flex flex-col items-center py-32">
       <header class="container mx-auto text-center mb-12">
         <h1 class="text-4xl font-bold text-gray-800">Book Your Appointment</h1>
         <p class="text-gray-600 mt-4">Schedule your next visit with us. Please fill out the form below, and we’ll get back to you to confirm your appointment.</p>

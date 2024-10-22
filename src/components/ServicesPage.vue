@@ -1,6 +1,6 @@
 <template>
   <div class="bg-gray-100 min-h-screen flex flex-col items-center">
-    <main class="container mx-auto text-center py-20">
+    <main class="container mx-auto text-center py-32">
       <h2 class="text-4xl font-bold text-gray-800 mb-8">Our Services</h2>
       <p class="text-gray-600 mb-16">Discover the wide range of nail care services we offer to keep your nails looking their best.</p>
 
