@@ -18,7 +18,7 @@
         <li><a href="/gallery" class="text-gray-700 hover:text-red-600 hover:font-bold">Gallery</a></li>
         <li><a href="/appointment" class="text-gray-700 hover:text-red-600 hover:font-bold">Appointments</a></li>
         <li><a href="/services" class="text-gray-700 hover:text-red-600 hover:font-bold">Services</a></li>
-        <li><a href="/about" class="text-gray-700 hover:text-red-600 hover:font-bold">About</a></li>
+        <!-- <li><a href="/about" class="text-gray-700 hover:text-red-600 hover:font-bold">About</a></li> -->
         <li><a href="/contact" class="text-gray-700 hover:text-red-600 hover:font-bold">Contact</a></li>
       </ul>
     </nav>
@@ -36,7 +36,7 @@
             <li><a href="/gallery" @click="toggleMenu" class="text-gray-700 hover:text-red-600">Gallery</a></li>
             <li><a href="/appointment" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Appointments</a></li>
             <li><a href="/services" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Services</a></li>
-            <li><a href="/about" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">About</a></li>
+            <!-- <li><a href="/about" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">About</a></li> -->
             <li><a href="/contact" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Contact</a></li>
           </ul>
         </div>

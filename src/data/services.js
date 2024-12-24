@@ -1,59 +1,59 @@
-import ClassicManicure from './images/classicmani.png';
-import GelManicure from './images/gelmanicure.png';
-import Pedicure from './images/pedicure.png';
-import NailArt from './images/nailart.png';
-import AcrylicNails from './images/acrylicnails.png';
-import SpaPackage from './images/spapackage.png';
+import axios from 'axios';
 
-export const services = [
-    {
-      id: 1,
-      name: 'Classic Manicure',
-      title: 'Classic Manicure',
-      img: ClassicManicure,
-      description: 'Experience our classic manicure that includes nail shaping, cuticle care, and a relaxing hand massage.',
-      price: '$20',
-    },
-    {
-      id: 2,
-      name: 'Gel Manicure',
-      title: 'Gel Manicure',
-      img: GelManicure,
-      description: 'Our gel manicure provides a long-lasting, chip-resistant finish with a high-gloss shine.',
-      price: '$35',
-    },
-    {
-      id: 3,
-      name: 'Pedicure',
-      title: 'Pedicure',
-      img: Pedicure,
-      description: 'Indulge in our luxurious pedicure that includes exfoliation, foot massage, and nail polish.',
-      price: '$30',
-    },
-    {
-      id: 4,
-      name: 'Nail Art',
-      title: 'Nail Art',
-      img: NailArt,
-      description: 'Get creative with our custom nail art designs to add a unique touch to your manicure.',
-      price: 'From $10',
-    },
-    {
-      id: 5,
-      name: 'Acrylic Nails',
-      title: 'Acrylic Nails',
-      img: AcrylicNails,
-      description: 'Enhance the length and strength of your nails with our durable acrylic nail extensions.',
-      price: '$40',
-    },
-    {
-      id: 6,
-      name: 'Spa Packages',
-      title: 'Spa Packages',
-      img: SpaPackage,
-      description: 'Enjoy our spa packages that combine multiple services for a complete nail care experience.',
-      price: 'From $60',
-    },
+const API_BASE_URL =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost/salon/test.php'
+    : 'https://elrenonailspa.com/api/php/test.php';
 
-  ];
+// Fetch all services with their categories
+export const getServices = async () => {
+    try {
+      const response = await axios.get(`${API_BASE_URL}`);
+      return response.data.data;
+    } catch (error) {
+      console.error("Error fetching services:", error);
+      return []; // Return an empty array on failure
+    }
+  };
   
+
+// Add a new service
+export const addService = async (service) => {
+  try {
+    const response = await axios.post(`${API_BASE_URL}`, {
+      method: 'POST',
+      ...service,
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error adding service:', error);
+    throw error;
+  }
+};
+
+// Update an existing service
+export const updateService = async (service) => {
+  try {
+    const response = await axios.put(`${API_BASE_URL}`, {
+      method: 'PUT',
+      ...service,
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error updating service:', error);
+    throw error;
+  }
+};
+
+// Delete a service
+export const deleteService = async (id) => {
+  try {
+    const response = await axios.delete(`${API_BASE_URL}`, {
+      data: { method: 'DELETE', id },
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error deleting service:', error);
+    throw error;
+  }
+};

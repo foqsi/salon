@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import LandingPage from '../components/LandingPage.vue';
-import ServicesPage from '../components/ServicesPage.vue';
-import AboutPage from '../components/AboutPage.vue';
-import ContactPage from '../components/ContactPage.vue';
-import AppointmentPage from '../components/AppointmentPage.vue';
 import GalleryPage from '../components/GalleryPage.vue';
+import AppointmentPage from '../components/AppointmentPage.vue';
+import ServicesPage from '../components/ServicesPage.vue';
+// import AboutPage from '../components/AboutPage.vue';
+import ContactPage from '../components/ContactPage.vue';
+import LoginPage from '../components/LoginPage.vue';
 
 const routes = [
     {
@@ -14,22 +15,10 @@ const routes = [
         meta: { title: 'El Reno Nail Salon' }
     },
     {
-        path: '/services',
-        name: 'ServicesPage',
-        component: ServicesPage,
-        meta: { title: 'Our Services - El Reno Nail Salon' }
-    },
-    {
-        path: '/about',
-        name: 'AboutPage',
-        component: AboutPage,
-        meta: { title: 'About Us - El Reno Nail Salon' }
-    },
-    {
-        path: '/contact',
-        name: 'ContactPage',
-        component: ContactPage,
-        meta: { title: 'Contact Us - El Reno Nail Salon' }
+        path: '/gallery',
+        name: 'GalleryPage',
+        component: GalleryPage,
+        meta: { title: 'Gallery - El Reno Nail Salon' }
     },
     {
         path: '/appointment',
@@ -38,11 +27,29 @@ const routes = [
         meta: { title: 'Book an Appointment - El Reno Nail Salon' }
     },
     {
-        path: '/gallery',
-        name: 'GalleryPage',
-        component: GalleryPage,
-        meta: { title: 'Gallery - El Reno Nail Salon' }
-    }
+        path: '/services',
+        name: 'ServicesPage',
+        component: ServicesPage,
+        meta: { title: 'Our Services - El Reno Nail Salon' }
+    },
+    // {
+    //     path: '/about',
+    //     name: 'AboutPage',
+    //     component: AboutPage,
+    //     meta: { title: 'About Us - El Reno Nail Salon' }
+    // },
+    {
+        path: '/contact',
+        name: 'ContactPage',
+        component: ContactPage,
+        meta: { title: 'Contact Us - El Reno Nail Salon' }
+    },
+    {
+        path: '/login',
+        name: 'LoginPage',
+        component: LoginPage,
+        meta: { title: 'Login - El Reno Nail Salon' }
+    },
 ];
 
 

@@ -7,7 +7,11 @@
   
       <main class="container mx-auto px-4">
         <form @submit.prevent="handleSubmit" class="bg-white p-8 rounded-lg shadow-md">
-          <h2 class="text-2xl font-bold text-gray-800 mb-6">Appointment Form</h2>
+
+          <iframe src="https://app.acuityscheduling.com/schedule.php?owner=33835314&ref=embedded_csp" title="Schedule Appointment" width="100%" height="800" frameBorder="0"></iframe>
+
+
+          <!-- <h2 class="text-2xl font-bold text-gray-800 mb-6">Appointment Form</h2>
   
           <div class="mb-4">
             <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
@@ -45,9 +49,12 @@
           <div class="mb-4">
             <label for="time" class="block text-gray-700 font-semibold mb-2">Preferred Time</label>
             <input type="time" id="time" v-model="form.time" required class="w-full p-2 border border-gray-300 rounded"/>
-          </div>
-  
-          <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-full text-lg hover:bg-red-500">Submit Appointment Request</button>
+          </div> -->
+
+
+          <!-- <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-full text-lg hover:bg-red-500">Submit Appointment Request</button> -->
+        
+        
         </form>
       </main>
     </div>

@@ -133,14 +133,21 @@
       <!-- User View -->
       <div v-if="!isAdmin" class="overflow-x-auto shadow-md rounded-lg">
         <table class="w-full bg-white border border-gray-200 rounded-lg">
+          <thead class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+            <tr>
+              <th class="py-3 px-6 text-left">Service</th>
+              <th class="py-3 px-6 text-left">Description</th>
+              <th class="py-3 px-6 text-left">Price</th>
+            </tr>
+          </thead>
           <tbody class="text-gray-700 text-sm font-light">
-            <tr v-if="services.length === 0" class="hover:bg-gray-100">
+            <tr v-if="services.length === 0" class="border-b border-gray-200 hover:bg-gray-100">
               <td colspan="3" class="py-3 px-6 text-center">No services available</td>
             </tr>
             <template v-for="(category, index) in services" :key="index">
               <!-- Category Header -->
               <tr>
-                <td colspan="3" class="py-4 px-12 text-gray-800 border-b border-red-600 charmb text-5xl test">
+                <td colspan="3" class="py-4 px-6 text-lg font-bold text-gray-800 bg-gray-100">
                   {{ category.category }}
                 </td>
               </tr>
@@ -148,11 +155,11 @@
               <tr
                 v-for="service in category.services"
                 :key="service.id"
-                class="hover:bg-gray-100"
+                class="border-b border-gray-200 hover:bg-gray-100"
               >
-                <td class="py-3 px-6 charm text-3xl">{{ service.name }}</td>
+                <td class="py-3 px-6">{{ service.name }}</td>
                 <td class="py-3 px-6">{{ service.description || '-' }}</td>
-                <td class="py-3 px-6 text-xl">
+                <td class="py-3 px-6">
                   ${{ service.price }}<span v-if="service.price_modifier">{{ service.price_modifier }}</span>
                 </td>
               </tr>
@@ -163,36 +170,6 @@
     </main>
   </div>
 </template>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
-
-.test {
-  background-image: url('../assets/images/services-bg.png');
-  background-position: left;
-  background-repeat: no-repeat;
-}
-
-.s1 {
-  background-image: url('../assets/images/s1.png');
-  background-size: fill;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-.charm {
-  font-family: "Charm", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.charmb {
-  font-family: "Charm", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-</style>
 
 <script>
 import { getServices, addService, updateService, deleteService } from "../data/services.js";
