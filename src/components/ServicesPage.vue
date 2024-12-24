@@ -42,6 +42,7 @@
           class="w-full mt-4 border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         ></textarea>
 
+        <!-- TODO: Fix checkbox -->
         <!-- Price Modifier Checkbox -->
         <div class="flex items-center mt-4">
           <input
