@@ -3,7 +3,6 @@ import LandingPage from '../components/LandingPage.vue';
 import GalleryPage from '../components/GalleryPage.vue';
 import AppointmentPage from '../components/AppointmentPage.vue';
 import ServicesPage from '../components/ServicesPage.vue';
-// import AboutPage from '../components/AboutPage.vue';
 import ContactPage from '../components/ContactPage.vue';
 import LoginPage from '../components/LoginPage.vue';
 
@@ -32,12 +31,6 @@ const routes = [
         component: ServicesPage,
         meta: { title: 'Our Services - El Reno Nail Salon' }
     },
-    // {
-    //     path: '/about',
-    //     name: 'AboutPage',
-    //     component: AboutPage,
-    //     meta: { title: 'About Us - El Reno Nail Salon' }
-    // },
     {
         path: '/contact',
         name: 'ContactPage',

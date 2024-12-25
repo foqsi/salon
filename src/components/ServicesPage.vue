@@ -3,8 +3,18 @@
     <main class="container mx-auto py-32">
       <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Services</h1>
 
+      <div v-if="isAdmin">
+        <button
+          @click="logout"
+          class="mb-4 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-400 focus:ring-2 focus:ring-red-300"
+        >
+        Logout
+        </button>
+      </div>
+
       <!-- Admin Add Service Section -->
       <div v-if="isAdmin" class="bg-white p-6 mb-8 rounded-lg shadow-md w-full max-w-3xl">
+        
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Add New Service</h2>
         <div class="flex flex-col md:flex-row gap-4">
           <!-- Category Dropdown -->
@@ -24,6 +34,7 @@
             v-model="newService.name"
             placeholder="Service Name"
             class="w-full md:w-1/3 border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            @keyup.enter="addService"
           />
 
           <!-- Price -->
@@ -32,6 +43,7 @@
             placeholder="Price"
             type="number"
             class="w-full md:w-1/3 border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            @keyup.enter="addService"
           />
         </div>
 
@@ -40,18 +52,19 @@
           v-model="newService.description"
           placeholder="Service Description (optional)"
           class="w-full mt-4 border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          @keyup.enter="addService"
         ></textarea>
 
-        <!-- TODO: Fix checkbox -->
         <!-- Price Modifier Checkbox -->
         <div class="flex items-center mt-4">
           <input
             type="checkbox"
-            v-model="newService.hasModifier"
+            v-model="newService.addModifier"
+            id="price-modifier"
             class="mr-2"
           />
-          <label for="hasModifier" class="text-gray-700">
-            Add a "+" modifier to the price
+          <label for="price-modifier" class="text-gray-700">
+            Add `+` modifier after the price
           </label>
         </div>
 
@@ -141,22 +154,19 @@
             <template v-for="(category, index) in services" :key="index">
               <!-- Category Header -->
               <tr>
-                <td colspan="3" class="py-4 px-12 text-gray-800 border-b border-red-600 charmb text-5xl test">
+                <td colspan="3" class="py-4 px-12 text-gray-800 border-b border-red-600 charmb text-5xl">
                   {{ category.category }}
                 </td>
               </tr>
               <!-- Service Rows -->
-              <tr
-                v-for="service in category.services"
-                :key="service.id"
-                class="hover:bg-gray-100"
-              >
+              <tr v-for="service in category.services" :key="service.id" class="hover:bg-gray-100">
                 <td class="py-3 px-6 charm text-3xl">{{ service.name }}</td>
                 <td class="py-3 px-6">{{ service.description || '-' }}</td>
                 <td class="py-3 px-6 text-xl">
-                  ${{ service.price }}<span v-if="service.price_modifier">{{ service.price_modifier }}</span>
+                  ${{ service.price }}<span v-if="service.price_modifier">+</span>
                 </td>
               </tr>
+
             </template>
           </tbody>
         </table>
@@ -203,8 +213,15 @@ export default {
     return {
       services: [], // Grouped services by category
       categories: [], // Categories for selection
-      newService: { name: "", price: 0, category_id: "" },
-      isAdmin: false,
+      newService: { 
+        category_id: "",
+        description: "",
+        name: "", 
+        price: 0,
+        addModifier: false, 
+        price_modifier: "" },
+        // isAdmin: false,
+      isAdmin: localStorage.getItem('isAdmin') === 'true',
     };
   },
   async created() {
@@ -215,17 +232,18 @@ export default {
         id: category.id,
         name: category.category,
       }));
-      console.log("Categories for dropdown:", this.categories);
     } catch (error) {
       console.error("Error fetching services:", error);
     }
   },
   methods: {
     async addService() {
+      this.newService.price_modifier = this.newService.addModifier ? "+" : "";
+
       try {
         await addService(this.newService);
         this.services = await getServices();
-        this.newService = { name: "", price: 0, category_id: "" };
+        this.newService = { name: "", price: 0, category_id: "", description: "" };
       } catch (error) {
         console.error("Error adding service:", error);
       }
@@ -246,6 +264,13 @@ export default {
         console.error("Error deleting service:", error);
       }
     },
+    logout() {
+      localStorage.removeItem('isAdmin');
+      this.isAdmin = false;
+      this.$router.push('/services')
+    }
   },
 };
+
+
 </script>

@@ -2,8 +2,8 @@ import axios from 'axios';
 
 const API_BASE_URL =
   process.env.NODE_ENV === 'development'
-    ? 'http://localhost/salon/test.php'
-    : 'https://elrenonailspa.com/api/php/test.php';
+    ? 'http://localhost/salon/Services.php'
+    : 'https://elrenonailspa.com/api/php/Services.php';
 
 // Fetch all services with their categories
 export const getServices = async () => {

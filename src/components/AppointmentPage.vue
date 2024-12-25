@@ -9,51 +9,6 @@
         <form @submit.prevent="handleSubmit" class="bg-white p-8 rounded-lg shadow-md">
 
           <iframe src="https://app.acuityscheduling.com/schedule.php?owner=33835314&ref=embedded_csp" title="Schedule Appointment" width="100%" height="800" frameBorder="0"></iframe>
-
-
-          <!-- <h2 class="text-2xl font-bold text-gray-800 mb-6">Appointment Form</h2>
-  
-          <div class="mb-4">
-            <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
-            <input type="text" id="name" v-model="form.name" required class="w-full p-2 border border-gray-300 rounded"/>
-          </div>
-  
-          <div class="mb-4">
-            <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
-            <input type="email" id="email" v-model="form.email" required class="w-full p-2 border border-gray-300 rounded"/>
-          </div>
-  
-          <div class="mb-4">
-            <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone Number</label>
-            <input type="tel" id="phone" v-model="form.phone" required class="w-full p-2 border border-gray-300 rounded"/>
-          </div>
-  
-          <div class="mb-4">
-            <label for="service" class="block text-gray-700 font-semibold mb-2">Select Service</label>
-            <select id="service" v-model="form.service" required class="w-full p-2 border border-gray-300 rounded">
-              <option value="" disabled>Select a service</option>
-              <option value="Classic Manicure">Classic Manicure</option>
-              <option value="Gel Manicure">Gel Manicure</option>
-              <option value="Pedicure">Pedicure</option>
-              <option value="Nail Art">Nail Art</option>
-              <option value="Acrylic Nails">Acrylic Nails</option>
-              <option value="Spa Packages">Spa Packages</option>
-            </select>
-          </div>
-  
-          <div class="mb-4">
-            <label for="date" class="block text-gray-700 font-semibold mb-2">Preferred Date</label>
-            <input type="date" id="date" v-model="form.date" required class="w-full p-2 border border-gray-300 rounded"/>
-          </div>
-  
-          <div class="mb-4">
-            <label for="time" class="block text-gray-700 font-semibold mb-2">Preferred Time</label>
-            <input type="time" id="time" v-model="form.time" required class="w-full p-2 border border-gray-300 rounded"/>
-          </div> -->
-
-
-          <!-- <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-full text-lg hover:bg-red-500">Submit Appointment Request</button> -->
-        
         
         </form>
       </main>

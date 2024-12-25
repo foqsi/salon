@@ -13,18 +13,20 @@
         </div>
       </section>
 
-      <div class="bg-cover bg-center h-[75vh] flex items-center justify-center" :style="{ backgroundImage: `url(${require('@/assets/images/storefront.jpg')})` }">
-        <div class="container mx-auto text-center">
-
-          <div class="bg-black bg-opacity-50 p-8 inline-block rounded-lg">
-            <h2 class="text-5xl font-bold text-white mb-6">Welcome to El Reno Nail Spa</h2>
-            <p class="text-xl text-white mb-8">Your perfect destination for stunning nails and relaxing spa experiences.</p>
-            <!-- <button class="bg-red-600 text-white px-8 py-3 rounded-full text-xl hover:bg-red-400 transition duration-300">
-              <a href="/appointment">Book an Appointment</a>
-            </button> -->
+      <div class="min-h-screen">
+        <main class="flex-grow">
+            <div class="relative h-[55vh]">
+              <img src="../assets/images/bg3.png" alt="Example" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-800 to-transparent opacity-75"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+            </div>
           </div>
-        </div>
+          <div class="mb-20"></div>
+          <AboutComponent/>
+          <LandingComponent/>
+        </main>
       </div>
+
       <!-- TODO: Scroll to proper service area -->
       <section class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 py-12 -mt-20">
         <a href="/services">
@@ -60,7 +62,13 @@
 </template>
 
 <script>
+import AboutComponent from './AboutComponent.vue';
+import LandingComponent from './LandingComponent.vue';
 export default {
-  name: 'LandingPage'
+  name: 'LandingPage',
+  components: {
+    AboutComponent,
+    LandingComponent,
+  }
 };
 </script>

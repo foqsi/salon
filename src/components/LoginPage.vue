@@ -31,7 +31,7 @@ export default {
     async handleLogin() {
       try {
         // Send a POST request to the PHP script for login
-        const response = await fetch('https://elrenonailspa.com/api/php/db.php', {
+        const response = await fetch('https://elrenonailspa.com/api/php/AdminLogin.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -45,6 +45,8 @@ export default {
         const result = await response.json();
 
         if (result.success) {
+          localStorage.setItem('isAdmin', 'true');
+
           // Redirect to services page upon successful login
           this.$router.push('/services');
         } else {
@@ -54,6 +56,11 @@ export default {
       } catch (error) {
         this.error = 'Error logging in. If you are an admin, please contact the owner of webpage for assistance.';
       }
+    }
+  },
+  mounted() {
+    if (localStorage.getItem('isAdmin') === 'true') {
+      this.$router.push('/services');
     }
   }
 };

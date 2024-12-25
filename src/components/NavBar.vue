@@ -16,7 +16,7 @@
       <ul class="hidden lg:flex space-x-4">
         <li><a href="/" class="text-gray-700 hover:text-red-600 hover:font-bold">Home</a></li>
         <li><a href="/gallery" class="text-gray-700 hover:text-red-600 hover:font-bold">Gallery</a></li>
-        <li><a href="/appointment" class="text-gray-700 hover:text-red-600 hover:font-bold">Appointments</a></li>
+        <!-- <li><a href="/appointment" class="text-gray-700 hover:text-red-600 hover:font-bold">Appointments</a></li> -->
         <li><a href="/services" class="text-gray-700 hover:text-red-600 hover:font-bold">Services</a></li>
         <!-- <li><a href="/about" class="text-gray-700 hover:text-red-600 hover:font-bold">About</a></li> -->
         <li><a href="/contact" class="text-gray-700 hover:text-red-600 hover:font-bold">Contact</a></li>
