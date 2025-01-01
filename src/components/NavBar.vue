@@ -34,7 +34,7 @@
           <ul class="flex flex-col items-start p-8 space-y-4">
             <li><a href="/" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Home</a></li>
             <li><a href="/gallery" @click="toggleMenu" class="text-gray-700 hover:text-red-600">Gallery</a></li>
-            <li><a href="/appointment" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Appointments</a></li>
+            <!-- <li><a href="/appointment" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Appointments</a></li> -->
             <li><a href="/services" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Services</a></li>
             <!-- <li><a href="/about" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">About</a></li> -->
             <li><a href="/contact" @click="toggleMenu" class="text-gray-700 text-lg hover:text-red-600">Contact</a></li>
