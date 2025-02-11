@@ -10,7 +10,7 @@
           />
         </a>
         <a href="/" class="inline-block"
-          ><span class="text-gray-400">El Reno</span> Nail Spa</a
+          ><span class="er">El Reno</span> Nail Spa</a
         >
       </h1>
       <div class="block lg:hidden">
@@ -154,6 +154,10 @@ export default {
 .slide-enter,
 .slide-leave-to {
   transform: translateX(100%);
+}
+
+.er {
+  color: #8d9094;
 }
 
 @media (max-width: 640px) {

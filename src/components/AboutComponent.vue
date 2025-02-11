@@ -6,20 +6,24 @@
         <div class="md:w-1/2">
           <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
           <p class="text-gray-600 text-justify">
-            At <b>El Reno Nail Spa</b>, we are more than just a nail salon.
-            We are a family-owned and family-operated business dedicated to serving
-            our community with care and excellence. <br/>
-            As a new addition to the town, we take pride in offering a welcoming 
-            and relaxing environment where every client feels valued and pampered. <br/>
-            Our mission is simple: to provide outstanding nail and spa services 
-            that combine quality, creativity, and comfort. Whether you're here for a quick 
-            touch-up, a luxurious spa treatment, or stunning nail art, our team is 
-            committed to exceeding your expectations. <br/>
-            We believe in building lasting relationships with our clients by delivering
-            personalized care and attention to detail. Every visit to El Reno Nail Spa is
-            an opportunity to relax, unwind, and leave feeling refreshed and confident. <br/>
-            Thank you for welcoming us to El Reno. We look forward to serving you and being
-            a part of your self-care journey!
+            At
+            <b class="text-red-600"><span class="err">El Reno</span> Nail Spa</b
+            >, we are more than just a nail salon. We are a family-owned and
+            family-operated business dedicated to serving our community with
+            care and excellence. <br />
+            As a new addition to the town, we take pride in offering a welcoming
+            and relaxing environment where every client feels valued and
+            pampered. <br />
+            Our mission is simple: to provide outstanding nail and spa services
+            that combine quality, creativity, and comfort. Whether you're here
+            for a quick touch-up, a luxurious spa treatment, or stunning nail
+            art, our team is committed to exceeding your expectations. <br />
+            We believe in building lasting relationships with our clients by
+            delivering personalized care and attention to detail. Every visit to
+            El Reno Nail Spa is an opportunity to relax, unwind, and leave
+            feeling refreshed and confident. <br />
+            Thank you for welcoming us to El Reno. We look forward to serving
+            you and being a part of your self-care journey!
           </p>
         </div>
         <!-- Image -->
@@ -40,3 +44,9 @@ export default {
   name: "AboutComponent",
 };
 </script>
+
+<style>
+.err {
+  color: #8d9094;
+}
+</style>
