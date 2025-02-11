@@ -1,20 +1,24 @@
 <template>
   <div class="bg-gray-100 min-h-screen flex flex-col items-center">
     <main class="container mx-auto py-32">
-      <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Services</h1>
+      <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">
+        Services
+      </h1>
 
       <div v-if="isAdmin">
         <button
           @click="logout"
           class="mb-4 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-400 focus:ring-2 focus:ring-red-300"
         >
-        Logout
+          Logout
         </button>
       </div>
 
       <!-- Admin Add Service Section -->
-      <div v-if="isAdmin" class="bg-white p-6 mb-8 rounded-lg shadow-md w-full max-w-3xl">
-        
+      <div
+        v-if="isAdmin"
+        class="bg-white p-6 mb-8 rounded-lg shadow-md w-full max-w-3xl"
+      >
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Add New Service</h2>
         <div class="flex flex-col md:flex-row gap-4">
           <!-- Category Dropdown -->
@@ -24,7 +28,11 @@
             class="w-full md:w-1/3 border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             <option disabled value="">Select Category</option>
-            <option v-for="category in categories" :key="category.id" :value="category.id">
+            <option
+              v-for="category in categories"
+              :key="category.id"
+              :value="category.id"
+            >
               {{ category.name }}
             </option>
           </select>
@@ -78,9 +86,14 @@
       </div>
 
       <!-- Editable Admin View -->
-      <div v-if="isAdmin" class="overflow-x-auto shadow-md rounded-lg w-full max-w-5xl">
+      <div
+        v-if="isAdmin"
+        class="overflow-x-auto shadow-md rounded-lg w-full max-w-5xl"
+      >
         <table class="w-full bg-white border border-gray-200 rounded-lg">
-          <thead class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+          <thead
+            class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"
+          >
             <tr>
               <th class="py-3 px-6 text-left">Service</th>
               <th class="py-3 px-6 text-left">Description</th>
@@ -89,13 +102,21 @@
             </tr>
           </thead>
           <tbody class="text-gray-700 text-sm font-light">
-            <tr v-if="services.length === 0" class="border-b border-gray-200 hover:bg-gray-100">
-              <td colspan="4" class="py-3 px-6 text-center">No services available</td>
+            <tr
+              v-if="services.length === 0"
+              class="border-b border-gray-200 hover:bg-gray-100"
+            >
+              <td colspan="4" class="py-3 px-6 text-center">
+                No services available
+              </td>
             </tr>
             <template v-for="(category, index) in services" :key="index">
               <!-- Category Header -->
               <tr>
-                <td colspan="4" class="py-4 px-6 text-lg font-bold text-gray-800 bg-gray-100">
+                <td
+                  colspan="4"
+                  class="py-4 px-6 text-lg font-bold text-gray-800 bg-gray-100"
+                >
                   {{ category.category }}
                 </td>
               </tr>
@@ -149,24 +170,33 @@
         <table class="w-full bg-white border border-gray-200 rounded-lg">
           <tbody class="text-gray-700 text-sm font-light">
             <tr v-if="services.length === 0" class="hover:bg-gray-100">
-              <td colspan="3" class="py-3 px-6 text-center">No services available</td>
+              <td colspan="3" class="py-3 px-6 text-center">
+                No services available
+              </td>
             </tr>
             <template v-for="(category, index) in services" :key="index">
               <!-- Category Header -->
               <tr>
-                <td colspan="3" class="py-4 px-12 text-gray-800 border-b border-red-600 charmb text-5xl">
+                <td
+                  colspan="3"
+                  class="py-4 px-12 text-gray-800 border-b border-red-600 text-5xl"
+                >
                   {{ category.category }}
                 </td>
               </tr>
               <!-- Service Rows -->
-              <tr v-for="service in category.services" :key="service.id" class="hover:bg-gray-100">
-                <td class="py-3 px-6 charm text-3xl">{{ service.name }}</td>
-                <td class="py-3 px-6">{{ service.description || '-' }}</td>
+              <tr
+                v-for="service in category.services"
+                :key="service.id"
+                class="hover:bg-gray-100"
+              >
+                <td class="py-3 px-6 text-xl">{{ service.name }}</td>
+                <td class="py-3 px-6">{{ service.description || "-" }}</td>
                 <td class="py-3 px-6 text-xl">
-                  ${{ service.price }}<span v-if="service.price_modifier">+</span>
+                  ${{ service.price
+                  }}<span v-if="service.price_modifier">+</span>
                 </td>
               </tr>
-
             </template>
           </tbody>
         </table>
@@ -175,53 +205,29 @@
   </div>
 </template>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
-
-.test {
-  background-image: url('../assets/images/services-bg.png');
-  background-position: left;
-  background-repeat: no-repeat;
-}
-
-.s1 {
-  background-image: url('../assets/images/s1.png');
-  background-size: fill;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-.charm {
-  font-family: "Charm", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.charmb {
-  font-family: "Charm", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-</style>
-
 <script>
-import { getServices, addService, updateService, deleteService } from "../data/services.js";
+import {
+  getServices,
+  addService,
+  updateService,
+  deleteService,
+} from "../data/services.js";
 
 export default {
   data() {
     return {
       services: [], // Grouped services by category
       categories: [], // Categories for selection
-      newService: { 
+      newService: {
         category_id: "",
         description: "",
-        name: "", 
+        name: "",
         price: 0,
-        addModifier: false, 
-        price_modifier: "" },
-        // isAdmin: false,
-      isAdmin: localStorage.getItem('isAdmin') === 'true',
+        addModifier: false,
+        price_modifier: "",
+      },
+      // isAdmin: false,
+      isAdmin: localStorage.getItem("isAdmin") === "true",
     };
   },
   async created() {
@@ -243,7 +249,12 @@ export default {
       try {
         await addService(this.newService);
         this.services = await getServices();
-        this.newService = { name: "", price: 0, category_id: "", description: "" };
+        this.newService = {
+          name: "",
+          price: 0,
+          category_id: "",
+          description: "",
+        };
       } catch (error) {
         console.error("Error adding service:", error);
       }
@@ -265,12 +276,10 @@ export default {
       }
     },
     logout() {
-      localStorage.removeItem('isAdmin');
+      localStorage.removeItem("isAdmin");
       this.isAdmin = false;
-      this.$router.push('/services')
-    }
+      this.$router.push("/services");
+    },
   },
 };
-
-
 </script>

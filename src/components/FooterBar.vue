@@ -22,12 +22,12 @@
           contact@elrenonailspa.com
         </a>
         <br />
-        <a href="/login" class="hover:text-red-300">Admin</a>
+        <!-- <a href="/login" class="hover:text-red-300">Admin</a> -->
       </div>
 
       <!-- Map Section -->
       <div class="md:w-1/2 mt-8 md:mt-0">
-        <MapComponent />
+        <!-- <MapComponent /> -->
       </div>
     </div>
 
@@ -39,12 +39,12 @@
 </template>
 
 <script>
-import MapComponent from "./MapComponent.vue";
+// import MapComponent from "./MapComponent.vue";
 
 export default {
   name: "FooterBar",
   components: {
-    MapComponent,
+    // MapComponent,
   },
 };
 </script>
