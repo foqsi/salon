@@ -1,16 +1,3 @@
-# salon
+# EL RENO NAIL SALON
 
-## Project setup
-
-```
-npm install
-npm install dotenv
-npm install @fawmi/vue-google-maps@latest
-npm install vue-router@next
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
+Contracted project for a local nail salon. Admins can navigate to a specific URL and add new, update, delete service items via the services page.
