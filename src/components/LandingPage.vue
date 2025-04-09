@@ -1,15 +1,15 @@
 <template>
   <div class="bg-gray-100 min-h-screen flex flex-col">
-    <main class="flex-grow pt-16">
+    <main class="flex-grow pt-24">
       <!-- Sale Section -->
-      <!-- <section class="bg-red-300 py-4 text-center">
+      <section class="bg-red-300 py-4 text-center">
         <div class="container mx-auto">
-          <h2 class="text-2xl font-bold text-red-800 mb-2">Grand Opening Sale!</h2>
-          <h2 class="text-1xl font-bold text-black-600 mb-2">December 15 - December 31</h2>
-          <p class="text-lg text-gray-800">Enjoy 20% off all services during our grand opening celebration.</p>
-          <p class="text-base text-gray-600 mt-1">Don't miss out on this limited-time offer!</p>
+          <h2 class="text-2xl font-bold text-red-800 mb-2">OPENING SATURDAY, April 12th!</h2>
+          <h2 class="text-1xl font-bold text-black-600 mb-2"></h2>
+          <p class="text-lg text-gray-800"></p>
+          <p class="text-base text-gray-600 mt-1"></p>
         </div>
-      </section> -->
+      </section>
 
       <div class="min-h-screen">
         <main class="flex-grow">
