@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-100 w-full">
     <main class="px-0">
-      <section class="justify-center hidden md:flex flex-wrap">
+      <section class="items-center hidden md:flex md:flex-col">
         <!-- Image 1 -->
         <div class="">
           <img

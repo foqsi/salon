@@ -2,59 +2,47 @@
   <div class="bg-gray-100 min-h-screen flex flex-col">
     <main class="flex-grow pt-24">
       <!-- Sale Section -->
-      <section class="bg-red-300 py-4 text-center">
+      <section class="bg-red-200 py-4 text-center">
         <div class="container mx-auto">
-          <h2 class="text-2xl font-bold text-red-800 mb-2">OPENING SATURDAY, April 12th!</h2>
-          <h2 class="text-1xl font-bold text-black-600 mb-2"></h2>
-          <p class="text-lg text-gray-800"></p>
-          <p class="text-base text-gray-600 mt-1"></p>
+          <h2 class="text-2xl font-bold text-red-800 mb-2">Join us for our SOFT OPENING! <br>
+            Enjoy all services with <span class="text-red-500 text-3xl">15%</span> off until May 9th!</h2>
         </div>
       </section>
 
-      <div class="min-h-screen">
+      <div class="min-h-screen mt-20">
         <main class="flex-grow">
-          <div class="relative h-[55vh]">
-            <img
-              src="../assets/images/bg4.png"
-              alt="Example"
-              class="w-full h-full object-cover max-w-[920px] mx-auto"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-b from-gray-300 to-transparent opacity-35"
-            ></div>
-            <div class="absolute bottom-4 left-4 text-white"></div>
+          <div class="relative">
           </div>
-          <div class="mb-20"></div>
-          <AboutComponent />
+          <AboutComponent/>
           <LandingComponent />
+          <div class="mb-20"></div>
         </main>
       </div>
 
       <!-- TODO: Scroll to proper service area -->
       <section
-        class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 py-12 -mt-20"
+        class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-12 -mt-20"
       >
-        <a href="/services">
+        <a href="/services" class="h-full">
           <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 duration-300"
+            class="h-full flex flex-col bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 duration-300"
           >
             <img
               src="../assets/images/mani.png"
               alt="Manicure"
               class="w-full h-48 object-cover"
             />
-            <div class="p-6 text-center">
+            <div class="flex-grow p-6 text-center flex flex-col justify-between">
               <h3 class="text-2xl font-bold text-red-600 mb-4">Manicure</h3>
               <p class="text-gray-600">
-                Professional manicure services to keep your nails looking
-                beautiful.
+                Professional manicure services to keep your nails looking beautiful.
               </p>
             </div>
           </div>
         </a>
         <a href="/services">
           <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 duration-300"
+          class="h-full flex flex-col bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 duration-300"
           >
             <img
               src="../assets/images/pedi.png"
@@ -71,7 +59,7 @@
         </a>
         <a href="/services">
           <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 duration-300"
+          class="h-full flex flex-col bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 duration-300"
           >
             <img
               src="../assets/images/nailart.png"

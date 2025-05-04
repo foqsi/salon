@@ -12,6 +12,21 @@
         >
           Logout
         </button>
+
+        <div class="mb-6">
+          <button
+            @click="toggleAppointments"
+            class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-500 focus:ring-2 focus:ring-indigo-300"
+          >
+            {{ acceptingAppointments ? "Pause Appointments" : "Resume Appointments" }}
+          </button>
+          <p class="text-sm mt-2 text-gray-600">
+            Currently:
+            <span :class="acceptingAppointments ? 'text-green-600' : 'text-red-600'">
+              {{ acceptingAppointments ? "Accepting Appointments" : "Not Accepting Appointments" }}
+            </span>
+          </p>
+        </div>
       </div>
 
       <!-- Admin Add Service Section -->
@@ -21,7 +36,6 @@
       >
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Add New Service</h2>
         <div class="flex flex-col md:flex-row gap-4">
-          <!-- Category Dropdown -->
           <select
             v-model="newService.category_id"
             @change="logCategorySelection"
@@ -37,7 +51,6 @@
             </option>
           </select>
 
-          <!-- Service Name -->
           <input
             v-model="newService.name"
             placeholder="Service Name"
@@ -45,7 +58,6 @@
             @keyup.enter="addService"
           />
 
-          <!-- Price -->
           <input
             v-model="newService.price"
             placeholder="Price"
@@ -55,7 +67,6 @@
           />
         </div>
 
-        <!-- Description -->
         <textarea
           v-model="newService.description"
           placeholder="Service Description (optional)"
@@ -63,7 +74,6 @@
           @keyup.enter="addService"
         ></textarea>
 
-        <!-- Price Modifier Checkbox -->
         <div class="flex items-center mt-4">
           <input
             type="checkbox"
@@ -76,7 +86,6 @@
           </label>
         </div>
 
-        <!-- Add Button -->
         <button
           @click="addService"
           class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-400 focus:ring-2 focus:ring-blue-300"
@@ -91,9 +100,7 @@
         class="overflow-x-auto shadow-md rounded-lg w-full max-w-5xl"
       >
         <table class="w-full bg-white border border-gray-200 rounded-lg">
-          <thead
-            class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"
-          >
+          <thead class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
             <tr>
               <th class="py-3 px-6 text-left">Service</th>
               <th class="py-3 px-6 text-left">Description</th>
@@ -102,25 +109,15 @@
             </tr>
           </thead>
           <tbody class="text-gray-700 text-sm font-light">
-            <tr
-              v-if="services.length === 0"
-              class="border-b border-gray-200 hover:bg-gray-100"
-            >
-              <td colspan="4" class="py-3 px-6 text-center">
-                No services available
-              </td>
+            <tr v-if="services.length === 0" class="border-b border-gray-200 hover:bg-gray-100">
+              <td colspan="4" class="py-3 px-6 text-center">No services available</td>
             </tr>
             <template v-for="(category, index) in services" :key="index">
-              <!-- Category Header -->
               <tr>
-                <td
-                  colspan="4"
-                  class="py-4 px-6 text-lg font-bold text-gray-800 bg-gray-100"
-                >
+                <td colspan="4" class="py-4 px-6 text-lg font-bold text-gray-800 bg-gray-100">
                   {{ category.category }}
                 </td>
               </tr>
-              <!-- Editable Service Rows -->
               <tr
                 v-for="service in category.services"
                 :key="service.id"
@@ -170,12 +167,9 @@
         <table class="w-full bg-white border border-gray-200 rounded-lg">
           <tbody class="text-gray-700 text-sm font-light">
             <tr v-if="services.length === 0" class="hover:bg-gray-100">
-              <td colspan="3" class="py-3 px-6 text-center">
-                No services available
-              </td>
+              <td colspan="3" class="py-3 px-6 text-center">No services available</td>
             </tr>
             <template v-for="(category, index) in services" :key="index">
-              <!-- Category Header -->
               <tr>
                 <td
                   colspan="3"
@@ -184,7 +178,6 @@
                   {{ category.category }}
                 </td>
               </tr>
-              <!-- Service Rows -->
               <tr
                 v-for="service in category.services"
                 :key="service.id"
@@ -193,8 +186,7 @@
                 <td class="py-3 px-6 text-xl">{{ service.name }}</td>
                 <td class="py-3 px-6">{{ service.description || "-" }}</td>
                 <td class="py-3 px-6 text-xl">
-                  ${{ service.price
-                  }}<span v-if="service.price_modifier">+</span>
+                  ${{ service.price }}<span v-if="service.price_modifier">+</span>
                 </td>
               </tr>
             </template>
@@ -216,8 +208,8 @@ import {
 export default {
   data() {
     return {
-      services: [], // Grouped services by category
-      categories: [], // Categories for selection
+      services: [],
+      categories: [],
       newService: {
         category_id: "",
         description: "",
@@ -226,26 +218,27 @@ export default {
         addModifier: false,
         price_modifier: "",
       },
-      // isAdmin: false,
       isAdmin: localStorage.getItem("isAdmin") === "true",
+      acceptingAppointments: false,
     };
   },
   async created() {
     try {
       this.services = await getServices();
-
       this.categories = this.services.map((category) => ({
         id: category.id,
         name: category.category,
       }));
+      const res = await fetch('/api/php/settings.php?key=acceptingAppointments');
+      const data = await res.json();
+      this.acceptingAppointments = data.value === true || data.value === 1;
     } catch (error) {
-      console.error("Error fetching services:", error);
+      console.error("Error initializing page:", error);
     }
   },
   methods: {
     async addService() {
       this.newService.price_modifier = this.newService.addModifier ? "+" : "";
-
       try {
         await addService(this.newService);
         this.services = await getServices();
@@ -280,6 +273,22 @@ export default {
       this.isAdmin = false;
       this.$router.push("/services");
     },
+    async toggleAppointments() {
+      this.acceptingAppointments = !this.acceptingAppointments;
+      const res = await fetch('/api/php/updateSettings.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          key: 'acceptingAppointments',
+          value: this.acceptingAppointments
+        })
+      });
+      const result = await res.json();
+      if (!result.success) {
+        console.error('Failed to update appointment toggle');
+        this.acceptingAppointments = !this.acceptingAppointments; // revert
+      }
+    }
   },
 };
 </script>

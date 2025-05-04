@@ -16,13 +16,22 @@
         </a>
         <br />
         <a
-          href="mailto:contact@elrenonailspa.com"
+          href="mailto:elrenonailspa@gmail.com"
           class="text-white underline hover:text-gray-300"
         >
-          contact@elrenonailspa.com
+          elrenonailspa@gmail.com
         </a>
-        <br />
+        <br /><br/>
         <!-- <a href="/login" class="hover:text-red-300">Admin</a> -->
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-lg font-bold mb-4">Business Hours</h2>
+        <p>Monday - Saturday: 10:00AM - 7:00PM</p>
+        <p>Sunday: 12:00PM - 6:00PM</p>
+      </div>
+      <br/><br/>
+      <div class="md:w-1/2">
+        <a href="/login" class="hover:text-red-300">Admin</a>
       </div>
 
       <!-- Map Section -->
